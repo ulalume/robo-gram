@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>node.js chat</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <title>test robogram</title>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
 
@@ -82,10 +81,10 @@
         };
 
         window.onload = function () {
-            $("#robotJson").val(JSON.stringify(DEFAULT_NODE, null, 2));
-
-            $("body").css("background-color", randomHighLuminanceColor);
-            console.log($("body"));
+            window.document.querySelector("#robotJson").value = JSON.stringify(DEFAULT_NODE, null, 2);
+            window.document.querySelector("body").setAttribute("style",
+              "background-color: " + randomHighLuminanceColor + ";"
+            );
         };
 
 
@@ -109,7 +108,7 @@
         });
 
         function createRobot() {
-            var json = $("#robotJson").val();
+            var json = window.document.querySelector("#robotJson").value;
             var node = JSON.parse(json);
 
             // robot の作成
@@ -131,7 +130,6 @@
             }
             return "#" + ((r << 16) + (g << 8) + b).toString(16);
         }
-
 
         function luminance(rgba) {
           var r = 0.298912;
