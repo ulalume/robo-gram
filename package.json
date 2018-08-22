@@ -1,0 +1,11 @@
+{
+  "name": "robogram-server",
+  "version": "0.0.1",
+  "description": "Robogram",
+  "dependencies": {
+    "socket.io": "2.1.1"
+},
+  "scripts" : {
+    "start": "node server.js"
+  }
+}
