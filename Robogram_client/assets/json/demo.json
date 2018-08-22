@@ -1,0 +1,183 @@
+[
+	// { type: "start", label: "開始" },
+	// {
+	// 	type: "branch",
+	// 	label: "分岐",
+	// 	method: "random",
+	// 	condition: "boolean",
+	// 	params: true,
+	// 	isOpen: false,
+	// 	routes: [
+	// 		[
+	// 			{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 			{
+	// 				type: "branch",
+	// 				label: "分岐",
+	// 				method: "random",
+	// 				condition: "boolean",
+	// 				params: true,
+	// 				isOpen: false,
+	// 				routes: [
+	// 					[
+	// 						{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 						{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 						{
+	// 							type: "branch",
+	// 							label: "分岐",
+	// 							method: "random",
+	// 							condition: "boolean",
+	// 							params: true,
+	// 							isOpen: false,
+	// 							routes: [
+	// 								[
+	// 									{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 									{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 									{ type: "addNew", label: "+", isOpen: false },
+	// 								],
+	// 								[
+	// 									{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 									{
+	// 										type: "branch",
+	// 										label: "分岐",
+	// 										method: "random",
+	// 										condition: "boolean",
+	// 										params: true,
+	// 										isOpen: false,
+	// 										routes: [
+	// 											[
+	// 												{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 												{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 												{ type: "addNew", label: "+", isOpen: false },
+	// 											],
+	// 											[
+	// 												{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 												{
+	// 													type: "branch",
+	// 													label: "分岐",
+	// 													method: "random",
+	// 													condition: "boolean",
+	// 													params: true,
+	// 													isOpen: false,
+	// 													routes: [
+	// 														[
+	// 															{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 															{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 															{ type: "addNew", label: "+", isOpen: false },
+	// 														],
+	// 														[
+	// 															{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 															{ type: "addNew", label: "+", isOpen: false },
+	// 														]
+	// 													]
+	// 												}
+	// 											]
+	// 										]
+	// 									}
+	// 								]
+	// 							]
+	// 						}
+	// 					],
+	// 					[
+	// 						{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 						{ type: "addNew", label: "+", isOpen: false },
+	// 					]
+	// 				]
+	// 			}
+	// 		],
+	// 		[
+	// 			{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 			{
+	// 				type: "branch",
+	// 				label: "分岐",
+	// 				method: "random",
+	// 				condition: "boolean",
+	// 				params: true,
+	// 				isOpen: false,
+	// 				routes: [
+	// 					[
+	// 						{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 						{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 						{ type: "addNew", label: "+", isOpen: false },
+	// 					],
+	// 					[
+	// 						{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 						{
+	// 							type: "branch",
+	// 							label: "分岐",
+	// 							method: "random",
+	// 							condition: "boolean",
+	// 							params: true,
+	// 							isOpen: false,
+	// 							routes: [
+	// 								[
+	// 									{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 									{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 									{
+	// 										type: "branch",
+	// 										label: "分岐",
+	// 										method: "random",
+	// 										condition: "boolean",
+	// 										params: true,
+	// 										isOpen: false,
+	// 										routes: [
+	// 											[
+	// 												{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 												{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 												{ type: "addNew", label: "+", isOpen: false },
+	// 											],
+	// 											[
+	// 												{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 												{
+	// 													type: "branch",
+	// 													label: "分岐",
+	// 													method: "random",
+	// 													condition: "boolean",
+	// 													params: true,
+	// 													isOpen: false,
+	// 													routes: [
+	// 														[
+	// 															{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 															{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 															{ type: "addNew", label: "+", isOpen: false },
+	// 														],
+	// 														[
+	// 															{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 															{
+	// 																type: "branch",
+	// 																label: "分岐",
+	// 																method: "random",
+	// 																condition: "boolean",
+	// 																params: true,
+	// 																isOpen: false,
+	// 																routes: [
+	// 																	[
+	// 																		{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 																		{ type: "method", label: "回転", method: "rotate", param: 90, isOpen: false  },
+	// 																		{ type: "addNew", label: "+", isOpen: false },
+	// 																	],
+	// 																	[
+	// 																		{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 																		{ type: "addNew", label: "+", isOpen: false },
+	// 																	]
+	// 																]
+	// 															}
+	// 														]
+	// 													]
+	// 												}
+	// 											]
+	// 										]
+	// 									}
+	// 								],
+	// 								[
+	// 									{ type: "method", label: "前進", method: "move", param: 100, isOpen: false  },
+	// 									{ type: "addNew", label: "+", isOpen: false },
+	// 								]
+	// 							]
+	// 						}
+	// 					]
+	// 				]
+	// 			}
+	// 		]
+	// 	]
+	// }
+]

@@ -1,0 +1,44 @@
+@import "./mixins"
+@import "./extends"
+@import "./variables"
+
+html
+	font-size RootSize
+	+min-screen(LargeWindow)
+		font-size RootSize
+body
+	font-family 'Avenir', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'メイリオ',  'Hiragino Kaku Gothic Pro', sans-serif
+	color #2c3e50
+p
+	line-height 1.75em
+a
+	animate(.15)
+	text-decoration none
+	color Blue
+	&:hover
+		color DarkBlue
+*
+	webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	-o-box-sizing border-box
+	-ms-box-sizing border-box
+	box-sizing border-box
+img
+	max-width 100%
+	height auto
+
+.huge
+	font-size HugeSize
+.xlarge
+	font-size ExtraLargeSize
+.large
+	font-size LargeSize
+.meduim
+	font-size MediumSize
+.regular
+	font-size RegularSize
+.small
+	font-size SmallSize
+.xsmall
+	font-size ExtraSmallSize
+
