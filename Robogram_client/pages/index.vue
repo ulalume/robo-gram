@@ -155,6 +155,7 @@
 				}
 			},
 			onOpen(event){
+                console.log("open")
 			},
 			onClose(event){
 				this.connection.startConnection()
@@ -186,9 +187,9 @@
 		},
 		mounted(){
 			if("WebSocket" in window){
-				this.connection = io.connect("https://robo-gram.glitch.me")
+				//this.connection = io.connect("https://robo-gram.glitch.me")
     			//this.connection = io.connect("https://athena.softdevice.jp")
-			    //this.connection = io.connect("http://localhost:3000")
+			    this.connection = io.connect("http://localhost:3000")
 				this.connection.on("connect", this.onOpen)
 				this.connection.on("disconnect", this.onClose)
 				this.connection.on("onChangeNowPanel", (data)=>{

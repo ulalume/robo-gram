@@ -3,16 +3,17 @@ const express = require('express');
 const app = express();
 const http = require("http").Server(app);
 const fs = require("fs");
-//const serveIndex = require('serve-index');
+const serveIndex = require('serve-index');
 
 const ROOT_PATH = './';
 const PORT = process.env.VMC_APP_PORT || 3000;
 
 app.use(express.static(ROOT_PATH, { index: "index.html" }));
-/*app.use(serveIndex(ROOT_PATH, {
+app.use(serveIndex(ROOT_PATH, {
     icons: true,
     view: "details"
-}));*/
+}));
+
 const server = app.listen(PORT, () => {
   console.log(`express server *:${PORT}`);
 });
