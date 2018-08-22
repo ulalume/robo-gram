@@ -1,24 +1,22 @@
-var http = require("http");
-var socketio = require("socket.io");
-var fs = require("fs");
+'use strict';
+const express = require('express');
+const app = express();
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const fs = require("fs");
+const serveIndex = require('serve-index');
 
-var port = process.env.VMC_APP_PORT || 3000;
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {
-        "Content-Type": "text/html"
-    });
-    var output = fs.readFileSync("./index.html", "utf-8", function (err, data) {
-            if(err){
-                res.writeHead(404, {'Content-Type': 'text/plain'});
-                res.write('Not Found');
-                return res.end();
-            }
-        }
-    );
-    res.end(output);
-}).listen(port);
+const ROOT_PATH = './';
+const PORT = process.env.VMC_APP_PORT || 3000;
 
-var io = socketio.listen(server);
+app.use(express.static(ROOT_PATH, { index: "index.html" }));
+app.use(serveIndex(ROOT_PATH, {
+    icons: true,
+    view: "details"
+}));
+app.listen(PORT, () => {
+  console.log(`express server *:${PORT}`);
+});
 
 io.sockets.on("connection", function(socket) {
     console.log("connection from", socket.id);

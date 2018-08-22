@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "Robogram",
   "dependencies": {
+    "express": "^4.16.3",
+    "serve-index": "^1.9.1",
     "socket.io": "2.1.1"
-},
-  "scripts" : {
+  },
+  "scripts": {
     "start": "node server.js"
   }
 }
