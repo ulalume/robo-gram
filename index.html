@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>node.js chat</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <title>robo-gram</title>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
 
@@ -82,16 +81,16 @@
         };
 
         window.onload = function () {
-            $("#robotJson").val(JSON.stringify(DEFAULT_NODE, null, 2));
-
-            $("body").css("background-color", randomHighLuminanceColor);
-            console.log($("body"));
+            window.document.querySelector("#robotJson").value = JSON.stringify(DEFAULT_NODE, null, 2);
+            window.document.querySelector("body").setAttribute("style",
+              "background-color: " + randomHighLuminanceColor + ";"
+            );
         };
 
 
 
 
-        var server = io.connect("http://localhost:3000");
+        var server = io.connect("https://robo-gram.glitch.me:3000");
         //var server = io.connect("http://192.168.0.70:3000");
         //サーバから受け取るイベント
         server.on("connect", function() {
@@ -109,7 +108,7 @@
         });
 
         function createRobot() {
-            var json = $("#robotJson").val();
+            var json = window.document.querySelector("#robotJson").value;
             var node = JSON.parse(json);
 
             // robot の作成
@@ -132,7 +131,6 @@
             return "#" + ((r << 16) + (g << 8) + b).toString(16);
         }
 
-
         function luminance(rgba) {
           var r = 0.298912;
           var g = 0.586611;
@@ -141,7 +139,6 @@
         }
     </script>
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -158,7 +155,6 @@
         <textarea type="text" class="text" id="robotJson" ></textarea>
         <input type="submit" class="button" onclick="createRobot();" value="ロボットを作成" />
     </form>
-    </div>
 </body>
 
 </html>
